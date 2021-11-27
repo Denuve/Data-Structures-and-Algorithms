@@ -29,40 +29,69 @@ namespace Number_of_elements_Sets
         static void Main(string[] args)
         {
             int a, b, c, d, e;
-            int j = 0;
-
-            int[] x = new int[100];
-            int[] y = new int[4];
 
             Console.Write("a=");
             a = int.Parse(Console.ReadLine());
-            x[a]++;
 
             Console.Write("b=");
             b = int.Parse(Console.ReadLine());
-            x[b]++;
 
             Console.Write("c=");
             c = int.Parse(Console.ReadLine());
-            x[c]++;
 
             Console.Write("d=");
             d = int.Parse(Console.ReadLine());
-            x[d]++;
 
             Console.Write("e=");
             e = int.Parse(Console.ReadLine());
-            x[e]++;
 
-            for (int i = 0; i < x.Length; i++)
+            if (a == b && a == c && a == d && a == e)
             {
-                if( x[i] != 0 )
-                {
-                    y[j] = x[i];
-                    j++;
-                }
+                Console.WriteLine("Toate valorile sunt egale");
             }
 
+            //a,b,c,d,e
+            else if ((a == b && a == c && a == d) || (a == b && a == c && a == c && a == e) ||
+                    (b == c && b == d && b == e))
+            {
+                Console.WriteLine("Exista 4 valori egale");
+            }
+
+            else if ((a == b && a == c && d == e) || (a == b && a == d && c == e) ||
+                    (a == b && a == e && c == d) || (a == c && a == d && b == e) ||
+                    (a == c && a == e && b == d) || (a == d && a == e && b == c) ||
+                    (b == c && b == d && a == e) || (b == c && b == e && a == d) || (b == d && b == e && a == c) ||
+                    (c == d && c == e && a == b))
+            {
+                Console.WriteLine("Exista 3 valori egale iar celelalte 2 sunt de asemenea egale");
+            }
+
+            //a,b,c,d,e
+            else if ((a == b && a == c) || (a == b && a == d) || (a == b && a == e) ||
+                    (a == c && a == d) || (a == c && a == e) || (a == d && a == e) ||
+                    (b == c && b == d) || (b == c && b == e) || (b == d && b == e) ||
+                    (c == d && c == e))
+            {
+                Console.WriteLine("Exista 3 numere egale");
+            }
+
+            else if ((a == b && c == d) || (b == c && d == e))
+            {
+                Console.WriteLine("Exista 2 cate 2 valori identice");
+            }
+
+
+            else if (a == b || a == c || a == d || a == e || b == c || b == d || b == e || c == d || c == e || d == e)
+            {
+                Console.WriteLine("Exista 2 valori identice");
+            }
+
+            
+            
+
+            
+
+           
             Console.ReadKey();
         }
     }

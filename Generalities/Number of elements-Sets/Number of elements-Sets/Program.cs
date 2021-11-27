@@ -52,6 +52,7 @@ namespace Number_of_elements_Sets
 
             //a,b,c,d,e
             else if ((a == b && a == c && a == d) || (a == b && a == c && a == c && a == e) ||
+                (a == b && a == d && a == e) ||
                     (b == c && b == d && b == e))
             {
                 Console.WriteLine("Exista 4 valori egale");

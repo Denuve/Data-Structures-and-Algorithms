@@ -51,8 +51,8 @@ namespace Number_of_elements_Sets
             }
 
             //a,b,c,d,e
-            else if ((a == b && a == c && a == d) ||(a == c && a == d & a == e) || 
-                    (a == b && a == c && a == e) ||  (a == b && a == d && a == e) ||
+            else if ((a == b && a == c && a == d) || (a == c && a == d & a == e) ||
+                    (a == b && a == c && a == e) || (a == b && a == d && a == e) ||
                     (b == c && b == d && b == e))
             {
                 Console.WriteLine("Exista 4 valori egale");
@@ -76,8 +76,9 @@ namespace Number_of_elements_Sets
                 Console.WriteLine("Exista 3 numere egale");
             }
 
-            else if ((a == b && c == d) || (b == c && d == e))
+            else if ((a == b && c == d) || (a == c && d == e)||  (b == c && d == e))
             {
+                //Not finished
                 Console.WriteLine("Exista 2 cate 2 valori identice");
             }
 
